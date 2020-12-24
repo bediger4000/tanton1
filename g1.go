@@ -17,14 +17,14 @@ const (
 )
 
 func main() {
-	n, err := strconv.Atoi(os.Args[1])
+	totalIterations, err := strconv.Atoi(os.Args[1])
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	rand.Seed(time.Now().UnixNano() + int64(os.Getpid()))
 
-	fmt.Printf("# %d iterations\n", n)
+	fmt.Printf("# %d iterations\n", totalIterations)
 	wins, losses := 0, 0
 
 	distribution := make(map[int]int)
@@ -36,7 +36,7 @@ func main() {
 
 	l := 3
 
-	for i := 0; i < n; i++ {
+	for i := 0; i < totalIterations; i++ {
 		playing := true
 		for playing {
 			ball := bag[rand.Intn(l)]
@@ -74,7 +74,7 @@ func main() {
 		n := distribution[k]
 		total += n
 		if n > 0 {
-			fmt.Printf("%d\t%d\n", k, n)
+			fmt.Printf("%d\t%d\t%.5f\n", k, n, float64(n)/float64(totalIterations))
 		}
 	}
 	fmt.Printf("# %d wins, %d losses\n", wins, losses)
