@@ -12,6 +12,8 @@ Put ball back, add another white ball to bag, try again.
 What are the chances of winning?
 What's the hard way to answer this?
 
+*This game proposed by James Tanton, @jamestanton*
+
 ![image of game](Ep7MYwsVEAIbdlQ.png)
 
 ## Program
