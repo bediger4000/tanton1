@@ -2,7 +2,7 @@
 
  [Original tweet](https://twitter.com/jamestanton/status/1341736172897243136?s=03)
 
-A bag contains 1 read, 1 blue and 1 white ball.
+A bag contains 1 red, 1 blue and 1 white ball.
 Pull out a ball at random.
 If blue, win.
 If red, lose.
@@ -54,11 +54,21 @@ Only the number of random ball-choosing is in doubt.
 |8|2777|0.00555|
 |9|2005|0.00401|
 
+This table represents 494383 (98.9%) of a 500,000 trial run
+of the simulation program.
+One of the trials took 3339 choices to get to a win or a loss.
+Even this makes sense given that a white ball gets added to the
+bag after every choice of a white ball: the probability of winning
+or losing goes down with every non-win-or-loss choice of a white ball.
+
 This is a very typical distribution of the count of choices
 it takes to get to a win or a loss.
-Since there are 3 balls, only one of which isn't a win or a loss,
-te 0.667 proportion of trials for 1 choice makes sense.
+Just as a double check,
+there are 3 balls, only one of which isn't a win or a loss,
+so the 0.667 proportion of trials for 1 choice makes sense.
 There are only 33% of the choices left to distribute
 after that, and on the second choice, you've got a 50% chance
 of winning or losing: 0.33 * 0.50 = 0.165, almost exactly
 the proportion of 2-choice games.
+
+![count of choices distribution](distribution.png)
