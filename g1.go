@@ -69,10 +69,12 @@ func main() {
 	sort.Sort(sort.IntSlice(iterations))
 
 	total := 0
+	moment := 0
 	for j := range iterations {
 		k := iterations[j]
 		n := distribution[k]
 		total += n
+		moment += k * n
 		if n > 0 {
 			fmt.Printf("%d\t%d\t%.5f\n", k, n, float64(n)/float64(totalIterations))
 		}
@@ -80,4 +82,5 @@ func main() {
 	fmt.Printf("# %d wins, %d losses\n", wins, losses)
 	fmt.Printf("# %.4f wins, %.4f losses\n", float64(wins)/float64(total), float64(losses)/float64(total))
 	fmt.Printf("# Total %d\n", total)
+	fmt.Printf("# Ave number of choices in a game: %.4f\n", float64(moment)/float64(total))
 }
