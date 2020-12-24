@@ -31,6 +31,7 @@ $ ./g1 50000
 # 249930 wins, 250070 losses
 # 0.4999 wins, 0.5001 losses
 # Total 500000
+# Ave number of choices in a game: 2.0036
 $
 ```
 
@@ -62,6 +63,8 @@ One of the trials took 3339 choices to get to a win or a loss.
 Even this makes sense given that a white ball gets added to the
 bag after every choice of a white ball: the probability of winning
 or losing goes down with every non-win-or-loss choice of a white ball.
+And despite the 3339 choice game, large numbers of trials
+reveal that on average, games only take a little more than 2 choices.
 
 This is a very typical distribution of the count of choices
 it takes to get to a win or a loss.
